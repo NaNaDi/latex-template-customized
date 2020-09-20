@@ -1,9 +1,25 @@
+\lstset{basicstyle=\footnotesize\ttfamily,breaklines=true}
+
 \definecolor{weedgreen}{HTML}{81C58F}
 \definecolor{lightbrown}{HTML}{c5a681}
 \definecolor{lightmagenta}{HTML}{c581be}
 \setbeamercolor{structure}{fg=weedgreen!70!black}
 \setbeamercolor{frametitle}{bg=weedgreen!70!black}
 \setbeamercolor{progress bar}{fg=lightbrown,bg=lightmagenta}
+
+\lstset{
+  showspaces=false,
+  showtabs=false,
+  breaklines=true,
+  showstringspaces=false,
+  breakatwhitespace=true,
+  commentstyle=\color{lightbrown},
+  keywordstyle=\color{weedgreen},
+  stringstyle=\color{lightmagenta},
+  basicstyle=\ttfamily,
+  moredelim=[il][\textcolor{lightbrown}]{$$},
+  moredelim=[is][\textcolor{lightbrown}]{\%\%}{\%\%}
+}
 
 \makeatletter
 \setlength{\metropolis@titleseparator@linewidth}{1pt}
