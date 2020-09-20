@@ -1,0 +1,37 @@
+\definecolor{weedgreen}{HTML}{81C58F}
+\definecolor{lightbrown}{HTML}{c5a681}
+\definecolor{lightmagenta}{HTML}{c581be}
+\setbeamercolor{structure}{fg=weedgreen!70!black}
+\setbeamercolor{frametitle}{bg=weedgreen!70!black}
+\setbeamercolor{progress bar}{fg=lightbrown,bg=lightmagenta}
+
+\makeatletter
+\setlength{\metropolis@titleseparator@linewidth}{1pt}
+\setlength{\metropolis@progressonsectionpage@linewidth}{1pt}
+\setlength{\metropolis@progressinheadfoot@linewidth}{1pt}
+
+\defbeamertemplate*{section page}{mytheme}[1][]{
+  \centering
+  \begin{minipage}{22em}
+    \raggedright
+    \usebeamercolor[fg]{section title}
+    \usebeamerfont{section title}
+    \insertsectionhead\\[-1ex]
+    \usebeamertemplate*{progress bar in section page}
+    \par
+    \ifx\insertsubsectionhead\@empty\else%
+      \usebeamercolor[fg]{subsection title}%
+      \usebeamerfont{subsection title}%
+      \insertsubsectionhead
+    \fi
+    \vskip0.5cm
+    \ifstrempty{#1}{}{%
+    	\centering
+        \includegraphics[width=.4\textwidth]{#1}%
+    }
+  \end{minipage}
+  \par
+  \vspace{\baselineskip}
+}
+
+\makeatother

@@ -1,0 +1,53 @@
+\documentclass[aspectratio=169]{beamer}
+
+\input{packages.tex}
+
+\usetheme[progressbar=frametitle]{metropolis}
+\title{The title}
+\author{My name}
+\date{\today}
+
+\input{layout.tex}
+\input{commands.tex}
+
+\begin{document}
+
+\titleframe
+
+\section{Introduction}
+
+\begin{frame}{The title of the frame}
+	hello
+\end{frame}
+
+\sectionpic{Iva \& Yuri}{img/cats}
+
+\begin{frame}{The title of another frame}
+	hello1
+\end{frame}
+
+\section{Tables}
+
+\begin{frame}{A beautiful table}
+
+	\begin{customtable}{l c c }{A beautiful table}{tab-example}
+		1 & 2 & 3 \\
+		4 & 5 & 6 \\
+	\end{customtable}
+
+	In this paragraph I can reference my table \ref{tab-example}
+
+\end{frame}
+
+\section{References}
+
+\begin{frame}{Some beautiful references}
+	Here is some text where I want to add a reference \cite{Dittrich19}
+\end{frame}
+
+\begin{frame}{References}
+    \bibliographystyle{amsalpha}
+    \bibliography{bibliography/bibliography.bib}
+\end{frame}
+
+\end{document}

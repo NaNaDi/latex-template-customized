@@ -1,0 +1,37 @@
+\newcommand{\sectionpic}[2]{
+   \setbeamertemplate{section page}[mytheme][#2]
+   \section{#1}
+   \setbeamertemplate{section page}[mytheme]
+}
+
+\newcommand{\titleframe}{
+	\begin{frame}[noframenumbering,plain]
+		\titlepage
+	\end{frame}
+}
+
+\newcommand{\topline}{
+	\arrayrulecolor{weedgreen}
+	\toprule
+	\arrayrulecolor{gray}
+}
+
+\newcommand{\bottomline}{
+	\arrayrulecolor{black}
+	\bottomrule
+}
+
+
+\NewDocumentEnvironment{customtable}{ m m m }{
+		\table
+		\centering
+		\tabular{#1}
+		\topline
+	}
+	{	
+		\bottomline
+		\endtabular
+		\caption{#2}
+		\label{#3}
+		\endtable
+	}
