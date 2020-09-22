@@ -10,6 +10,12 @@
 	\end{frame}
 }
 
+\newcommand{\pic}[3]{
+  \epsfig{file=#1, width=#2}\\
+         { #3
+         }
+}
+
 \newcommand{\topline}{
 	\arrayrulecolor{weedgreen}
 	\toprule
@@ -28,7 +34,7 @@
 		\tabular{#1}
 		\topline
 	}
-	{	
+	{
 		\bottomline
 		\endtabular
 		\caption{#2}
