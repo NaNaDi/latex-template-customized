@@ -1,1 +1,2 @@
-# latex-template-customized
+## Compilation
+```make file=FILENAME```
