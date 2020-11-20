@@ -19,7 +19,17 @@
   basicstyle=\ttfamily
 }
 
+\newcounter{cont}
+
 \makeatletter
+
+\setbeamertemplate{frametitle continuation}{%
+    \setcounter{cont}{\beamer@endpageofframe}%
+    \addtocounter{cont}{1}%
+    \addtocounter{cont}{-\beamer@startpageofframe}%
+    (\insertcontinuationcount/\arabic{cont})%
+}% end frame title continuation
+
 
 \algrenewcommand\ALG@beginalgorithmic{\footnotesize\ttfamily}
 
